@@ -27,27 +27,27 @@
 defined('AJXP_EXEC') or die( 'Access not allowed');
 
 $REPOSITORIES[0] = array(
-    "DISPLAY"		=>	"Default Files",
+    "DISPLAY"           =>      "Default Files",
     "DISPLAY_ID"    =>  430,
     "DESCRIPTION_ID"=>  475,
-    "AJXP_SLUG"		=>  "default",
-    "DRIVER"		=>	"fs",
+    "AJXP_SLUG"         =>  "default",
+    "DRIVER"            =>      "fs",
     "DRIVER_OPTIONS"=> array(
-        "PATH"			=>	"AJXP_DATA_PATH/common_files",
-        "CREATE"		=>	true,
-        "RECYCLE_BIN" 	=> 	'.pydio_recycle_bin',
+        "PATH"                  =>      "AJXP_DATA_PATH/files",
+        "CREATE"                =>      true,
+        "RECYCLE_BIN"   =>      'recycle_bin',
         "CHMOD_VALUE"   =>  '0600',
         "DEFAULT_RIGHTS"=>  "",
         "PAGINATION_THRESHOLD" => 500,
         "PAGINATION_NUMBER" => 200,
-        "META_SOURCES"		=> array(
+        "META_SOURCES"          => array(
             "metastore.serial"=> array(
-                "METADATA_FILE"	=> ".ajxp_meta",
+                "METADATA_FILE" => ".ajxp_meta",
                 "METADATA_FILE_LOCATION" => "infolders"
             ),
             "meta.user"     => array(
-                "meta_fields"		=> "tags",
-                "meta_labels"		=> "Tags",
+                "meta_fields"           => "tags",
+                "meta_labels"           => "Tags",
                 "meta_visibility"   => "hidden"
             ),
             "meta.filehasher"   => array(),
@@ -66,27 +66,27 @@ $REPOSITORIES[0] = array(
 );
 
 $REPOSITORIES[1] = array(
-    "DISPLAY"		=>	"My Files",
+    "DISPLAY"           =>      "My Files",
     "DISPLAY_ID"    =>  432,
     "DESCRIPTION_ID"=>  476,
-    "AJXP_SLUG"		=>  "my-files",
-    "DRIVER"		=>	"fs",
+    "AJXP_SLUG"         =>  "my-files",
+    "DRIVER"            =>      "fs",
     "DRIVER_OPTIONS"=> array(
-        "PATH"			=>	"/home/AJXP_USER",
-        "CREATE"		=>	true,
-        "RECYCLE_BIN" 	=> 	'.pydio_recycle_bin',
+        "PATH"                  =>      "AJXP_DATA_PATH/personal/AJXP_USER",
+        "CREATE"                =>      true,
+        "RECYCLE_BIN"   =>      'recycle_bin',
         "CHMOD_VALUE"   =>  '0600',
         "DEFAULT_RIGHTS"=>  "rw",
         "PAGINATION_THRESHOLD" => 500,
         "PAGINATION_NUMBER" => 200,
-        "META_SOURCES"		=> array(
+        "META_SOURCES"          => array(
             "metastore.serial"=> array(
-                "METADATA_FILE"	=> ".ajxp_meta",
+                "METADATA_FILE" => ".ajxp_meta",
                 "METADATA_FILE_LOCATION" => "infolders"
             ),
             "meta.user"     => array(
-                "meta_fields"		=> "tags",
-                "meta_labels"		=> "Tags",
+                "meta_fields"           => "tags",
+                "meta_labels"           => "Tags",
                 "meta_visibility"   => "hidden"
             ),
             "meta.filehasher"   => array(),
@@ -108,22 +108,22 @@ $REPOSITORIES[1] = array(
 // DO NOT REMOVE THIS!
 // USER DASHBOARD
 $REPOSITORIES["ajxp_user"] = array(
-    "DISPLAY"		    =>	"My Dashboard",
-    "AJXP_SLUG"		    =>  "dashboard",
-    "DISPLAY_ID"		=>	"user_dash.title",
-    "DESCRIPTION_ID"	=>	"user_dash.desc",
-    "DRIVER"		    =>	"ajxp_user",
+    "DISPLAY"               =>  "My Dashboard",
+    "AJXP_SLUG"             =>  "dashboard",
+    "DISPLAY_ID"                =>      "user_dash.title",
+    "DESCRIPTION_ID"    =>      "user_dash.desc",
+    "DRIVER"                =>  "ajxp_user",
     "DRIVER_OPTIONS"    => array(
         "DEFAULT_RIGHTS" => "rw"
     )
 );
 
 $REPOSITORIES["ajxp_home"] = array(
-    "DISPLAY"		    =>	"Welcome",
-    "AJXP_SLUG"		    =>  "welcome",
-    "DISPLAY_ID"		=>	"user_home.title",
-    "DESCRIPTION_ID"	=>	"user_home.desc",
-    "DRIVER"		    =>	"ajxp_home",
+    "DISPLAY"               =>  "Welcome",
+    "AJXP_SLUG"             =>  "welcome",
+    "DISPLAY_ID"                =>      "user_home.title",
+    "DESCRIPTION_ID"    =>      "user_home.desc",
+    "DRIVER"                =>  "ajxp_home",
     "DRIVER_OPTIONS"    => array(
         "DEFAULT_RIGHTS" => "rw"
     )
@@ -131,35 +131,35 @@ $REPOSITORIES["ajxp_home"] = array(
 
 // ADMIN REPOSITORY
 $REPOSITORIES["ajxp_conf"] = array(
-    "DISPLAY"		    =>	"Settings",
-    "AJXP_SLUG"		    =>  "settings",
-    "DISPLAY_ID"		=>	"165",
-    "DESCRIPTION_ID"	=>	"506",
-    "DRIVER"		    =>	"ajxp_conf",
+    "DISPLAY"               =>  "Settings",
+    "AJXP_SLUG"             =>  "settings",
+    "DISPLAY_ID"                =>      "165",
+    "DESCRIPTION_ID"    =>      "506",
+    "DRIVER"                =>  "ajxp_conf",
     "DRIVER_OPTIONS"    => array()
 );
 
 $REPOSITORIES["fs_template"] = array(
-    "DISPLAY"		=>	"Sample Template",
+    "DISPLAY"           =>      "Sample Template",
     "DISPLAY_ID"    =>  431,
-    "IS_TEMPLATE"	=>  true,
-    "DRIVER"		=>	"fs",
+    "IS_TEMPLATE"       =>  true,
+    "DRIVER"            =>      "fs",
     "DRIVER_OPTIONS"=> array(
-        "CREATE"		=>	true,
-        "RECYCLE_BIN" 	=> 	'recycle_bin',
+        "CREATE"                =>      true,
+        "RECYCLE_BIN"   =>      'recycle_bin',
         "CHMOD_VALUE"   =>  '0600',
         "PAGINATION_THRESHOLD" => 500,
         "PAGINATION_NUMBER" => 200,
         "PURGE_AFTER"       => 0,
         "CHARSET"           => "",
-        "META_SOURCES"		=> array(
+        "META_SOURCES"          => array(
             "metastore.serial"=> array(
-                "METADATA_FILE"	=> ".ajxp_meta",
+                "METADATA_FILE" => ".ajxp_meta",
                 "METADATA_FILE_LOCATION" => "infolders"
             ),
             "meta.user"     => array(
-                "meta_fields"		=> "tags",
-                "meta_labels"		=> "Tags",
+                "meta_fields"           => "tags",
+                "meta_labels"           => "Tags",
                 "meta_visibility"   => "hidden"
             ),
             "meta.filehasher"   => array(),
@@ -176,3 +176,17 @@ $REPOSITORIES["fs_template"] = array(
     ),
 
 );
+
+if(!is_file(AJXP_PLUGINS_REPOSITORIES_CACHE)){
+    $content = "<?php \n";
+    $boots = glob(AJXP_INSTALL_PATH."/".AJXP_PLUGINS_FOLDER."/*/repositories.php");
+    if($boots !== false){
+        foreach($boots as $b){
+            $content .= 'require_once("'.$b.'");'."\n";
+        }
+    }
+    $resWriteRepoCache = @file_put_contents(AJXP_PLUGINS_REPOSITORIES_CACHE, $content);
+}
+if(!isSet($resWriteRepoCache) || $resWriteRepoCache === true){
+    include_once(AJXP_PLUGINS_REPOSITORIES_CACHE);
+}
