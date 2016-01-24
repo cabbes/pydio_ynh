@@ -51,7 +51,7 @@ sudo cp ../conf/bootstrap_repositories.php $final_path/conf
 sed -i "s@YNH_MYSQL_PWD@$db_pwd@g" ../conf/bootstrap.json
 sed -i "s@YNH_ADMIN@$admin@g" ../conf/bootstrap.json
 sudo mkdir -p $data_path/data/plugins/boot.conf
-sudo cp ../conf/bootstrap.json $data_path/data/plugins/boot.conf/bootstrap.json
+sudo cp ../conf/bootstrap.json $final_path/plugins/boot.conf/bootstrap.json
 sudo yunohost app setting pydio admin -v $admin
 
 sudo touch $data_path/data/cache/admin_counted
